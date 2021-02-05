@@ -1,6 +1,6 @@
-# Surviving Titanic
+# Who would survive Titanic?
 
-This project utilises the Titanic-dataset in Kaggle to predict whether a passenger would survive or not. This is a classification task I used the RandomForestClassifier with hyperdrive and also the AutoML in order to find the best possible model. Both received similar results. As the AutoML received a slightly better accuracy, I deployed the model and also consumed the endpoint by sending a datapoint and receiving a prediction. I have taken several screenshots of different aspects of this project. They can be found in the screencasts folder. I will not bring all here to keep readability high.
+My project uses the dataset for Titanic from Kaggle, which I used because I thought it was interesting. I completed this project to predict people who would survive Titanic, which required classification. As required by the first project, I used task I used the RandomForestClassifier with hyperdrive and also the AutoML in order to find the best possible model. Both received similar results. As the AutoML received a slightly better accuracy, I deployed the model and also consumed the endpoint by sending a datapoint and receiving a prediction. I have taken several screenshots of different aspects of this project. They can be found in the screencasts folder. I will not bring all here to keep readability high.
 
 ## Project Set Up and Installation
 
@@ -22,7 +22,7 @@ This is the titanic-dataset available in Kaggle. In the image below you can see 
 ![columns in the raw data](/screenshots/raw_data.png)
 
 ### Cleaning data
-The data was cleaned. I filled the missing information in the age column with the medium value of that column. I transformed the values male and female to 0 and 1 respectively. I transformed information on the family size and created the feature "isAlone" to highlight those without family on board. I dropped the columns name, ticket, cabin and embarked. An example of the clean data is below:
+I cleaned the data a bit to have more meaningful results. I dropped the cabin number thinking it would not be useful. I replaced the null values in the age column, which there were 177 of, with medians. I transformed the values male and female to 0 and 1 respectively. I transformed information on the family size and created the feature "isAlone" to highlight those without family on board. . An example of the clean data is below:
 ![columns in the clean data](/screenshots/clean_data.png)
 
 ### Task
