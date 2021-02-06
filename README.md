@@ -1,24 +1,25 @@
 # Who would survive Titanic?
 
-My project uses the dataset for Titanic from Kaggle, which I used because I thought it was interesting. I completed this project to predict people who would survive Titanic, which required classification. As required by the first project, I used task I used the RandomForestClassifier with hyperdrive and also the AutoML in order to find the best possible model. Both received similar results. As the AutoML received a slightly better accuracy, I deployed the model and also consumed the endpoint by sending a datapoint and receiving a prediction. I have taken several screenshots of different aspects of this project. They can be found in the screencasts folder. I will not bring all here to keep readability high.
+My project uses the dataset for Titanic from Kaggle, which I used because I thought it was interesting. I completed this project to predict people who would survive Titanic, which required classification. As required by the first project, I used the RandomForestClassifier, which is more robust compared to general classification, with hyperdrive and also the AutoML in order to find the best possible model. Both received similar results. As the AutoML received a slightly better accuracy, I deployed the model and also consumed the endpoint by sending a datapoint and receiving a prediction. 
 
 ## Project Set Up and Installation
 
 ## Setup
 For this project, one needs a workspace in Azure for machine learning. In the workspace:
-0. Download the code as a zip-file and extract all files from the zip.
-1. Download the workspace config. In the image below, clicking on the workspace name, where the red arrow points, opens a panel on the left side, where one can download the config file highlighted in the image below with a red circle.
+1. First off, I downloaded the files provided to us
+2. Created a compute instance and compute cluster
+2. Download the workspace config. In the image below, clicking on the workspace name, where the red arrow points, opens a panel on the left side, where one can download the config file highlighted in the image below with a red circle.
 ![where to find the config](/screenshots/get_config.png)
 
 2. Go to notebooks and upload both .ipynb files, score.py, train.py as well as titanic.csv from these files and the config.json file downloaded in the previous step.
 3. import the titanic-dataset into datasets
-4. Create a compute named "titanic-compute" and a compute cluster named "ML-cluster-uda"
-5. Run the cells in the notebooks.
+
+5. Fill in the required spaces and execute the code
 
 ## Dataset
 
 ### Overview
-This is the titanic-dataset available in Kaggle. In the image below you can see the top rows of the dataset before it has been cleaned. It has information on the sex, age, family situation on board, class on board, cabin, embarkment etc.
+This is a freely available dataset from Kaggle. In the image below you can see the top rows of the dataset before it has been cleaned. It has information on the passenger. the sex, age, family situation on board, class on board, cabin, embarkment etc.
 ![columns in the raw data](/screenshots/raw_data.png)
 
 ### Cleaning data
